@@ -1,3 +1,9 @@
+TV Show catalog app created using React. It fetches data from an online api.
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
