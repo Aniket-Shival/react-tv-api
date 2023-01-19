@@ -6,7 +6,7 @@ import Navbar from 'react-bootstrap/Navbar';
 const NavigationBar = () => {
   return (
     <div >
-    <Navbar style={{ backgroundColor:'#3c3c3c' }}   variant='dark' expand="lg">
+    <Navbar style={{ backgroundColor:'#060608' }}   variant='dark' expand="lg">
     <Container>
       <Navbar.Brand >MovieMiddleMen</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />

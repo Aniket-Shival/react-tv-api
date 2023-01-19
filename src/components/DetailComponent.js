@@ -5,6 +5,7 @@ import axios from 'axios';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
+import Card from 'react-bootstrap/Card';
 //eslint-disable-next-line
 import { Cookies, useCookies } from 'react-cookie';
 
@@ -42,28 +43,30 @@ const DetailComponent = () => {
 
 
   return (
-    <div className='container'>
+    <div className='container pb-5 '>
 
-      <div className=' mt-5 d-lg-flex d-block  justify-content-center'>
-        <h1 className='display-1 font-weight-bold'>{getDetail.name}</h1>
+      <div className=' mt-5  d-lg-flex d-block  justify-content-center'>
+        <h1 style={{ color:'#fad3cf' }} className='display-1 ms-5 font-weight-bold'>{getDetail.name}</h1>
       </div>
-      <div className='mt-5 d-lg-flex d-block justify-content-around '>
-        <img className='rounded-3' src={getDetail.image?.original} alt='loading...' style={{ maxWidth: '400px', maxHeight: '400px' }} />
+      <div className='my-5 pb-5 d-lg-flex d-block justify-content-around '>
+        <img  className='rounded-3 ms-2' src={getDetail.image?.original} alt={getDetail.name} style={{ maxWidth: '400px', maxHeight: '400px' }} />
         <div>
-          <h3 className="my-5">Rating: {getDetail.rating?.average}</h3>
-          <h3 className="my-5">Genre: {getDetail.genres?.map((x, index) => {
+          <h3 style={{ color:'#fad3cf' }} className="my-5 ms-2">Rating: {getDetail.rating?.average}</h3>
+          <h3 style={{ color:'#fad3cf' }} className="my-5 ms-2">Genre: {getDetail.genres?.map((x, index) => {
             return <span key={index}> {x} </span>
           })}</h3>
-          <h3 className="my-5">Language: {getDetail.language}</h3>
-          <h5 className='mt-5'>Buy tickets</h5>
-          <button onClick={changeform}>Tickets</button>
+          <h3 style={{ color:'#fad3cf' }} className="my-5 ms-2">Language: {getDetail.language}</h3>
+          <h5 style={{ color:'#fad3cf' }} className='mt-5 mb-4 ms-2'>Buy tickets</h5>
+         
+          <Button onClick={changeform} variant="outline-warning">Get a ticket</Button>
         </div>
       </div>
 
-
-      <h1 className="my-5">Summary</h1>
-      <h2 className="my-3">{getDetail.summary?.replace(/<[^>]*>/g, '')}</h2>
-
+<Card className="my-5 pt-5 pb-4 px-3" style={{ backgroundColor:'#060608' }}>
+<h1 style={{ color:'#fad3cf' }} className="my-3 d-flex justify-content-center">Summary</h1>
+      <h2 style={{ color:'#fad3cf' }} className="my-3 mx-1">{getDetail.summary?.replace(/<[^>]*>/g, '')}</h2>
+</Card>
+      
 
       {form ? '' :
         <Modal show={1} onHide={changeform}>

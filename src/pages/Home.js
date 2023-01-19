@@ -4,7 +4,7 @@ import TvCards from '../components/TvCards'
 
 const Home = () => {
   return (
-    <div>
+    <div style={{ backgroundColor:'#202430' }}>
         <NavigationBar/>
         <TvCards />
     </div>

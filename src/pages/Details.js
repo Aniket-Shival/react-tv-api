@@ -6,7 +6,7 @@ const Details = () => {
 
 
   return (
-    <div style={{ backgroundColor:'#AFA5A4E' }} >
+    <div style={{ backgroundColor:'#202430' }} >
         <NavigationBar/>
         <DetailComponent />
 
